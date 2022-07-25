@@ -1,4 +1,3 @@
-import App from "../App"
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -14,7 +13,7 @@ export default function ColorSchemesExample() {
           <Nav className="me-auto">
             <Nav.Link href="#home">Inicio</Nav.Link>
             <Nav.Link href="#features">Productos</Nav.Link>
-            <Nav.Link href="#pricing"><CartWidget/></Nav.Link>
+            <a href="#pricing"><CartWidget/></a>
           </Nav>
         </Container>
       </Navbar>
