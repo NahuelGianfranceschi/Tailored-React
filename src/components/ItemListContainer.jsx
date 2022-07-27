@@ -1,21 +1,32 @@
-import './ItemListContainer.css'
-import ItemCount from './ItemCount'
+    import "./ItemListContainer.css";
+    import {useState, useEffect} from "react";
+    import Product from "./Product";
 
-const ItemListContainer = (props) => {  
-        <div>
-            <h2>{props.greeting}</h2>
-        </div>    
-    const onAdd = (cantidad) =>{
-        alert(`usted ha comprado ${cantidad} producto${cantidad>1 ? 's' : ''}`)
-        return (
-            <div>
-                <h3 className="greeting">{props.greeting}</h3>
-                <ItemCount 
-                initial = {1}
-                stock = {15}
-                onAdd = {onAdd} />
-            </div>
-        )
-    }
-}    
-    export default ItemListContainer;
+    const ItemListContainer = (props) => {
+     
+     const {products} = props;   
+     const [productos, setProductos] = useState([]);
+     
+      
+      
+    useEffect( () => {
+       
+      fetch('ruta al json').then(res => setProductos(res.json()))
+      //Podes evitar poner la ruta relativa al JSON si lo importas directamente.
+    
+    }, [])
+    
+      
+     return (
+        
+      <div className="contenedor">
+      {/* <h3 className="greeting">{props.greeting}</h3> */}
+
+      {/* <ItemList products={productos} /> */}
+       {products.map((product) =>( 
+            <Product key={product.id} product={product}></Product>
+       ))}
+      </div>
+     );
+    };
+    export default ItemListContainer;    

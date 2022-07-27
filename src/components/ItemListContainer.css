@@ -1,6 +1,13 @@
 .greeting{
     margin: 5rem 0;
     text-align: center;
-    color: #939;
+    color: rgb(14, 13, 14);
     font-size: 2rem;
+}
+
+.contenedor{
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-evenly;
 }
