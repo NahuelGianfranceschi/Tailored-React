@@ -1,6 +1,5 @@
-import './ItemDetail.css'
 
-const itemDetail = {
+const trajes = {
     products:[
         {
             id: '1',
@@ -28,4 +27,4 @@ const itemDetail = {
         },
     ],
 };
-export default itemDetail;
+export default trajes;

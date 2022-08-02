@@ -1,6 +1,7 @@
     import "./ItemListContainer.css";
     import {useState, useEffect} from "react";
     import Product from "./Product";
+    import trajes from "../../mock/data";
 
     const ItemListContainer = (props) => {
      
@@ -9,13 +10,29 @@
      
       
       
-    useEffect( () => {
-       
-      fetch('ruta al json').then(res => setProductos(res.json()))
-      //Podes evitar poner la ruta relativa al JSON si lo importas directamente.
-    
-    }, [])
-    
+     useEffect(()=>{
+        const getData = new Promise(resolve => {
+            setTimeout(() => {
+                resolve(trajes);
+            }, 500);
+        });
+    },) 
+
+    const data = new Promise((resolve, reject) => {
+        
+      let condition = true
+      setTimeout(()=> {
+
+        if(condition){
+          resolve('La compra fue exitosa')
+        }else{
+          reject('Ocurrio un Error')
+        }
+      },2000)
+
+    })
+
+    console.log(data)
       
      return (
         

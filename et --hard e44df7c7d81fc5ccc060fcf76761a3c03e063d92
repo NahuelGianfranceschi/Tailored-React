@@ -1,0 +1,29 @@
+[33mcommit e44df7c7d81fc5ccc060fcf76761a3c03e063d92[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: NahuelGianfranceschi <nahuel.gianfra@gmail.com>
+Date:   Wed Jul 27 18:06:46 2022 -0300
+
+    correcciones
+
+[33mcommit db592387ec18259cf1bf7543bcd219053ea8fb0c[m
+Author: NahuelGianfranceschi <nahuel.gianfra@gmail.com>
+Date:   Mon Jul 25 19:48:14 2022 -0300
+
+    Commit Contador
+
+[33mcommit cfc0cca609ff7fbb6a5ae2b2f4ca4c1f83df924a[m
+Author: NahuelGianfranceschi <nahuel.gianfra@gmail.com>
+Date:   Wed Jul 20 16:47:58 2022 -0300
+
+    Commit cart y counter
+
+[33mcommit 4c574c22fad3303028d53510191f41deb2028b95[m
+Author: NahuelGianfranceschi <nahuel.gianfra@gmail.com>
+Date:   Mon Jul 18 21:13:40 2022 -0300
+
+    Primer commit
+
+[33mcommit 34957dfa0610f9a681d7bd8d0f2f2d6fe1f6eb6f[m
+Author: NahuelGianfranceschi <nahuel.gianfra@gmail.com>
+Date:   Wed Jul 13 13:03:14 2022 -0300
+
+    Initialize project using Create React App
