@@ -2,21 +2,27 @@
     import {useState, useEffect} from "react";
     import Product from "./Product";
     import trajes from "../../mock/data";
+    import { useParams } from "react-router-dom";
 
     const ItemListContainer = (props) => {
      
      const {products} = props;   
      const [productos, setProductos] = useState([]);
      
-      
-      
+     const {} = useParams();
+            
      useEffect(()=>{
         const getData = new Promise(resolve => {
             setTimeout(() => {
                 resolve(trajes);
             }, 500);
         });
-    },) 
+        if (categoriaId) {
+          getData.then(res => setData(res.filter(Formal.Indumentaria === categoriaId)));
+        }else{
+          getData.then(res => setData(res));
+        }
+    },[categoriaId]) 
 
     const data = new Promise((resolve, reject) => {
         

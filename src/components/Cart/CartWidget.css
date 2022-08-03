@@ -2,6 +2,7 @@
     background-color: #222;
     padding: 0.7rem;
     border-radius: 50%;
+    
 }
 
 .cart:hover{
@@ -15,4 +16,8 @@
     padding: 0.7rem;
     margin-right: 0.025rem;
     box-shadow: none;
+}
+
+.icono{
+    width: 4rem;
 }

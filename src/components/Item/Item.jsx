@@ -14,14 +14,15 @@
 
 import React from 'react'
 import './Item.css'
+import { Link } from 'react-router-dom'
 
 const Item = ({ info }) => {
   return (
     <div className="trajeMain">
-    <a href="_blank" className="traje">
+    <Link to={`/detalle/${info.id}`} className="traje">
        <img src={traje.image} alt=""/>
        <p className="textoTraje">{traje.title}</p>
-   </a>
+   </Link>
 </div>
   )
 }

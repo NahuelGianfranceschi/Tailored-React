@@ -1,4 +1,4 @@
-.contador-container{
+/* .contador-container{
     display: flex;
     justify-content: center;
 }
@@ -69,4 +69,15 @@
     margin: 2.5rem;
     font-size: 2rem;
     padding: 1rem;
+} */
+
+.counter{
+    width: fit-content;
+    background-color: rgb(129, 126, 120);
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 15%;
+    border: solid;
+    border-width: 2px;
 }
