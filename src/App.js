@@ -8,6 +8,7 @@ import ItemDetailContainer from './components/Item/ItemDetailContainer';
 import trajes from './mock/data';
 import ItemCount from './components/Item/ItemCount';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Cart from './components/Cart/Cart';
 
 
 function App() {
