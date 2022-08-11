@@ -3,8 +3,12 @@
     import Product from "./Product";
     import trajes from "../../mock/data";
     import { useParams } from "react-router-dom";
+    import { gFetch } from "../../mock/helpers";
 
     const ItemListContainer = (props) => {
+
+      const [setData] = useState([]);
+      const {categoriaId} = useParams();
      
      const {products} = props;   
      const [productos, setProductos] = useState([]);
