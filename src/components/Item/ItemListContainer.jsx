@@ -4,6 +4,7 @@
     import trajes from "../../mock/data";
     import { useParams } from "react-router-dom";
     import { gFetch } from "../../mock/helpers";
+    import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
 
     const ItemListContainer = (props) => {
 
@@ -16,16 +17,21 @@
      const {} = useParams();
             
      useEffect(()=>{
-        const getData = new Promise(resolve => {
-            setTimeout(() => {
-                resolve(trajes);
-            }, 500);
-        });
-        if (categoriaId) {
-          getData.then(res => setData(res.filter(Formal.Indumentaria === categoriaId)));
-        }else{
-          getData.then(res => setData(res));
-        }
+        const querydb = getFirestore();
+        const queryCollection = collection(querydb, 'products');
+       
+         if (categoriaId) {
+
+          const queryFilter = query(queryCollection, where('categoria','==', categoriaId))
+          getDocs(queryFilter)
+            .then(res => setData(res.docs.map(product=>({ id: product.id, ...product.data() }))))
+
+         }else{
+
+          getDocs(queryCollection)
+          .then(res => setData(res.docs.map(product=>({ id: product.id, ...product.data() }))))
+
+         }
     },[categoriaId]) 
 
     const data = new Promise((resolve, reject) => {
