@@ -2,7 +2,6 @@ import ItemDetail from "./ItemDetail";
 // import './ItemDetailContainer.css'
 import { getFirestore, doc, getDoc } from 'firebase/firestore'
 import React, {useState, useEffect} from "react";
-import trajes from '../../mock/data';
 import { useParams } from "react-router-dom";
 
 
