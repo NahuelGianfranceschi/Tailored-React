@@ -33,7 +33,6 @@ const CartProvider = ({ children }) => {
     const removeProduct = (id) => setCart(cart.filter(product => product.id !== id));
     
 
-    console.log("carrito: ", cart);
 
     return (
        <CartContext.Provider value={{

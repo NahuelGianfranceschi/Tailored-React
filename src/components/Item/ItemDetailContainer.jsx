@@ -14,11 +14,20 @@ export const ItemDetailContainer = () => {
     useEffect(() => {
         const querydb = getFirestore();
         const queryDoc = doc(querydb,'products', detalleId);
-        getDoc(queryDoc) 
-        .then(res=> setData({ id: res.id, ...res.data() }))
-        
+        getDoc(queryDoc)    
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          const getdata = {
+            id: snapshot.id,
+            ...snapshot.data()
+          }
+          setData(getdata)
+          console.log(getdata)
+        }
+      })
+      .catch((error) => console.error(error))
+      
     },[detalleId]);
-
     return (
         <ItemDetail data={data} />
     );

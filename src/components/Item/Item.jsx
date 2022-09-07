@@ -25,10 +25,10 @@ const Item = ({ info }) => {
 
   return (
     <div className="trajeMain">
-    <Link to={`/detalle/${info.id}`} className="traje">
+    
        <img src={traje.image} alt=""/>
        <p className="textoTraje">{traje.title}</p>
-   </Link>
+   
 </div>
   )
 }
