@@ -4,10 +4,15 @@ import { useCartContext } from '../../context/CartContext'
 import { addDoc, collection, getFirestore } from 'firebase/firestore'
 import ItemCart from './ItemCart';
 import { Link } from "react-router-dom";
+import PayCart from './PayCart';
+import { useState } from 'react'; 
+
 
 const Cart = () => {
 
   const { cart, totalPrice } = useCartContext();
+  const [purchaseId, setPurchaseId] = useState();
+    const getPurchaseId  = (get) =>  {setPurchaseId(get)}
 
   const order = {
     buyer: {
@@ -17,7 +22,7 @@ const Cart = () => {
       address: "Garavano 1500"
     },
     items: cart.map(product => ({id: product.id, title: product.nombre, price: product.precio, quantity: product.quantity }) ) ,
-    total: totalPrice(),
+    total: totalPrice,
   }
 
   const handleClick = () => {
@@ -36,16 +41,18 @@ const Cart = () => {
           </>
         );
     }
-
   return (
     <>
+    <div>
       {
         cart.map(product => <ItemCart key={product.id} product={product} />)
       }
       <p>
-        Total: {totalPrice()}
+        Total: {totalPrice}
       </p>
-      <button onClick={handleClick}>Comprar</button>
+      </div>
+      <PayCart getPurchaseId={getPurchaseId}/>
+
     </>
   )
 }

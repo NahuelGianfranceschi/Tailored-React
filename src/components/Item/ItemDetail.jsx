@@ -10,7 +10,7 @@ export const ItemDetail = ({data}) => {
 
     const onAdd = (unidades) => {
         setGoToCart(true);
-        // addProduct(data, quantity);
+        addProduct(data, unidades);
     }
     return (
         <div className="container">

@@ -18,11 +18,12 @@ const CartProvider = ({ children }) => {
         }
 
     }
-
-    const totalPrice= () => {
-        return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);
-    }
- 
+    const totalPrice = cart.map((e)=> e.precio*e.quantity).reduce((a,b)=> a + b,0);
+    //const totalPrice= () => {
+      //   cart.map((e)=> e.price*e.quantity).reduce((a,b)=> a + b,0);
+    
+   // }
+    console.log(totalPrice)
     const totalProducts = () => cart.reduce((acumulador, productoActual) => acumulador + productoActual.quantity, 0);
 
 

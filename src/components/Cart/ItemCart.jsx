@@ -1,12 +1,12 @@
 import React from "react";
 import { useCartContext } from "../../context/CartContext";
-// import './ItemCart.css';
+ import './ItemCart.css';
 
 const ItemCart = ({product}) => {
     const {removeProduct} = useCartContext();
     return(
         <div className="ItemCart">
-            <img src={product.imagen} alt={product.title} />
+            <img className="imgcheckout" src={product.imagen} alt={product.title} />
             <div>
                 <p>Nombre: {product.nombre}</p>
                 <p>Cantidad: {product.quantity}</p>
