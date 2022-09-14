@@ -35,7 +35,6 @@
      return (
       <div className="contenedor">
       {/* <h3 className="greeting">{props.greeting}</h3> */}
-
       {/* <ItemList products={productos} /> */}
        {data.map((product) => ( 
             <Product key={product.id} product={product}></Product>

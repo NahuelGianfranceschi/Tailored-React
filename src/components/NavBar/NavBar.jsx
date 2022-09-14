@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from '../Cart/CartWidget';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { NavLink } from 'react-router-dom';
+import './NavBar.css';
 
 export default function ColorSchemesExample() {
   return (
@@ -13,7 +14,7 @@ export default function ColorSchemesExample() {
         <Container>
           <Navbar.Brand NavLink to='/' >Tailored</Navbar.Brand>
           <Nav className="me-auto">
-            <NavLink to='/' >Inicio</NavLink>
+            <NavLink className='inicioIcon' to='/' >Inicio</NavLink>
             {/* 
             <NavLink to='/categoria'>Formal</NavLink>
             <NavLink to='/categoria'>Casual</NavLink> 
@@ -27,7 +28,7 @@ export default function ColorSchemesExample() {
                     <NavLink className='linkSubMenu' to='/Indumentaria/Casual'>Casual</NavLink>
                   </div>
                 </NavDropdown>
-            <NavLink to='/Cart'><CartWidget/></NavLink>
+            <NavLink className='cartInicioIcon' to='/Cart'><CartWidget/></NavLink>
           </Nav>
         </Container>
       </Navbar>

@@ -1,0 +1,27 @@
+.subMenu{
+margin: top 2px;bottom: 2px;
+display: grid;
+text-align: center;
+-webkit-text-stroke: thin;
+}
+
+.dropdown-menu{
+    background-color: currentColor;
+}
+
+.inicioIcon{
+    color: burlywood;
+    align-self: center;
+    -webkit-text-stroke: thin;
+}
+
+.cartInicioIcon{
+    color: burlywood;
+    align-self: center;
+    -webkit-text-stroke: thin;
+
+}
+
+.btnProductos{
+    border-radius: 20px;
+}

@@ -16,6 +16,7 @@ function App() {
     <div className="App" >
       <CartProvider>
         <NavBar/>
+        <h1>Bienvenido a Tailored!</h1>
         <Routes>
           <Route path='/' element={<ItemListContainer />}></Route>
           <Route path='/categoria/:categoriaId' element={<ItemListContainer />}></Route>

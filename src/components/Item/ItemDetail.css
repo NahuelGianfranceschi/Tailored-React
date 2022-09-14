@@ -1,3 +1,12 @@
 img.traje{
     width: 7rem;
 }
+
+.detail.box2{
+    border: solid;
+    background-color: #212529;
+    border-radius: 40px;
+    color: burlywood;
+    width: 40vw;
+    display: inline-table;
+}

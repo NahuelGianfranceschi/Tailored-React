@@ -73,9 +73,10 @@
 
 .counter{
     width: fit-content;
-    background-color: rgb(129, 126, 120);
+    background-color: #212529;
     margin: auto;
-    padding: 2rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
     text-align: center;
     border-radius: 15%;
     border: solid;
